@@ -1,0 +1,12 @@
+flask==2.0.2
+langchain==0.2.1
+sentence-transformers==2.1.0
+chroma==0.2.0
+transformers==4.28.0
+torch==2.0.0
+langchain-community==0.2.1
+pyfolder==0.0.2
+
+
+
+
