@@ -17,7 +17,8 @@ DataSensei is an advanced question-answering RAG system tailored for the data sc
 
 Here’s a preview of DataSensei:
 
-![Website Screenshot](E:\data_sensei.png)
+![data_sensei](https://github.com/Abhidyum/rag_datasensei/assets/94860032/a10be58f-a32e-4240-9a6d-836c033e6ebb)
+
 
 ## Installation
 
