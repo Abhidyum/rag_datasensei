@@ -9,7 +9,8 @@ DataSensei is an advanced question-answering RAG system tailored for the data sc
 
 ## Features
 
-- **Comprehensive Knowledge**: Trained on a number of data science books.
+- **Comprehensive Knowledge**: Uses number of data science books to retrieve information.
+- **Vector Database**: Utilizes Chroma vector database for efficient information retrieval based on semantic similarity.
 - **Accurate Responses**: Provides precise answers to your data science questions.
 - **User-Friendly Interface**: Easy to interact with and get the information you need.
 
