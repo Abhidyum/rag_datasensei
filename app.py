@@ -17,7 +17,7 @@ else:
     text_chunks = text_split(extracted_data)
     vectordb = setup_vector_store(text_chunks, persist_directory)
 
-retriever = vectordb.as_retriever(search_kwargs={'k': 1})
+retriever = vectordb.as_retriever(search_kwargs={'k': 2})
 
 prompt_template = """
 Use the following pieces of information to answer the user's question.
@@ -33,7 +33,7 @@ Helpful answer:
 PROMPT = PromptTemplate(template=prompt_template, input_variables=["context", "question"])
 chain_type_kwargs = {"prompt": PROMPT}
 
-llm = CTransformers(model="model/llama-2-7b-chat.ggmlv3.q4_0.bin", model_type="llama", config={'max_new_tokens': 512, 'temperature': 0.8})
+llm = CTransformers(model="model/llama-2-7b-chat.ggmlv3.q4_0.bin", model_type="llama", config={'max_new_tokens': 512, 'temperature': 0.5})
 qa = RetrievalQA.from_chain_type(llm=llm, chain_type="stuff", retriever=retriever, return_source_documents=True, chain_type_kwargs=chain_type_kwargs)
 
 @app.route('/', methods=['GET', 'POST'])
